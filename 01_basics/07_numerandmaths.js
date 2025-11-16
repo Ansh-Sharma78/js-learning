@@ -1,3 +1,5 @@
+const { mydate } = require("./08_dateandtime");
+
 //*********              number                  *******/
 const score=400
 // console.log(score); 
@@ -35,7 +37,8 @@ console.log((Math.random()*10)+1); //sometimes we want a random value betwen int
 const min=10
 const max=20
 //imp
-console.log(Math.floor(Math.random() * (max-min+1))+ min)
+console.log(Math.floor(Math.random() * (max-min+1))+ min);
+console.log(mydate.toTimeString());
 //+min humne isliya kiya to get atleast that required minimum value when the left side of the code generates zero
 //(max-min+1) is multiplid to shift decimal to left side .2
 
