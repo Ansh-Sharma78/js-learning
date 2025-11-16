@@ -24,10 +24,29 @@ let myObj = {
 const myFunction = function(){
 // console.log("helo world");
 
-// }
+}
 
 // console.log(typeof heroes);
 
 
-//++++++++++++++++++++++++++++++++++Memory in js+++++++++
+//++++++++++++++++++++++++++++++++++Memory in js++++++++
+
+let ch1="ansh vlogs"
+let ch2=ch1
+ch2="ansh gaming"
+
+console.log(ch1);
+console.log(ch2);
+
+let userOne = {
+    email: "ansh@google.com"
+
+}
+
+let userTwo=userOne
+
+userTwo.email="ansh@netflix.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
 
