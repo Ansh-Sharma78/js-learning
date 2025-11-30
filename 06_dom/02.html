@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Friday</div>
+        <div class="day">Sat</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector('.parent')
+    console.log(parent);
+    console.log(parent.children); //returns the children of the parent in HTML collection
+    console.log(parent.children[0]); 
+    console.log(parent.children[0].innerHTML); 
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+    // parent.children[1].style.color="orange"
+    //moving from parent to child
+    // console.log(parent.firstElementChild); 
+    // console.log(parent.lastElementChild); 
+    
+    //moving from child to parent
+    const day1=document.querySelector('.day')
+    // console.log(day1);
+    // console.log(day1.parentElement) 
+    // console.log(day1.nextElementSibling); //monday ka sibling mtlb next access ho jayega ye use krne pr
+    
+    console.log("Nodes:", parent.childNodes); //returns a node list which contains a tree like structure cotaining everything not just text attributes wagerah 16:38 lec 33
+    
+</script>
+</html>

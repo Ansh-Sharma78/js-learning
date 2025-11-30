@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+        <li>Python</li>
+    </ul>
+</body>
+<script>
+   // creating li (this methid is inefficient because evrytime we are appending li it is travering the whole tree structure)
+    function addlanguage(langname){
+          const li= document.createElement('li')
+          li.innerHTML=`${langname}`
+          document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("c++")
+    addlanguage("ruby")
+
+    //optimal approach
+    function addoptilang(langname){
+        const li= document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addoptilang("golang")
+
+    //edit
+    const seclang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')  //creates an empty li
+    newli.appendChild(document.createTextNode("Mojo")) //writes text in the li
+    seclang.replaceWith(newli) //replaces the element
+    
+    const onelang=document.querySelector("li:nth-child(1)")
+    const newli2=document.createElement('li')
+    newli2.appendChild(document.createTextNode("Java on TOP"))
+    onelang.replaceWith(newli2)
+
+    //remove
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()  //removes go lang
+</script>  
+</html>
