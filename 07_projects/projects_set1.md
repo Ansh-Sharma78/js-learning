@@ -63,3 +63,16 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+## project 3 
+
+```javascript
+const clock=document.querySelector('#clock')
+
+//set interval is a important concept in js for interviews also set interval is used when you want to perform a particular function on repeated time of interval like here we are displaying time every 1 second
+setInterval(function(){
+  const date=new Date();
+  clock.innerHTML= date.toLocaleTimeString();
+}, 1000)
+
+```
