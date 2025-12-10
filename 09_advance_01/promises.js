@@ -109,3 +109,5 @@ fetch('https://jsonplaceholder.typicode.com/users').then((response)=>{
  console.log(error);
  
 })
+//fetch:- fetch is special 
+
