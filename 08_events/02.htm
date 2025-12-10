@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){  //this function does the work defined in the block after the defined the time like here it will print the name after 2 seconds
+    //     console.log("ansh");    
+    // },2000);
+    //Or
+
+    let sayansh =function(){  //this function does the work defined in the block after the defined the time like here it will print the name after 2 seconds
+        console.log("ansh");    
+    }
+    setTimeout(sayansh, 2000) //refrence deke bhi kr sakte hai
+
+
+    //below code will change the text to best js series after 2 sec
+    const changetext=function(){
+        document.querySelector('h1').innerHTML="best js series"
+    }
+    const ref= setTimeout(changetext,3000)
+    
+
+    //below code stops the timeout function which changes the text using the stop button
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(ref)
+        console.log("stop");
+        
+    })
+
+</script>
+</html>

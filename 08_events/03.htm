@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){  //what set interval does is it repeats the work defined in the function after every interval like here the interval is 1000ms so it prints ansh after every 1000ms(1s)
+    //     console.log("ansh");
+        
+    // },1000)
+
+    // const sayDate = function(){  
+    //     console.log("ansh", Date.now());
+        
+    // }
+    // setInterval(sayDate,1000)
+
+    const sayDate = function(){  
+        console.log("ansh", Date.now());
+        
+    }
+
+    
+    //q1 => start button se printing start hojaye aur stop se stop hojaye
+    document.querySelector('#start').addEventListener('click',function(){
+        
+    const ref = setInterval(sayDate,1000)
+    document.querySelector('#stop').addEventListener('click',function(){
+        
+        clearInterval(ref)
+    })
+    })
+
+    
+</script>
+</html>
